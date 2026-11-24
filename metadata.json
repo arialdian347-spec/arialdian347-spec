@@ -1,0 +1,6 @@
+{
+  "name": "TataNaskah — Sistem Surat & Lampiran Otomatis",
+  "description": "Sistem pembuatan surat resmi dan lampiran otomatis berbasis database template terstruktur dengan penomoran otomatis, pratinjau A4, cetak PDF, dan ekspor Word.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

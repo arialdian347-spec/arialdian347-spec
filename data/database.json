@@ -1,0 +1,1379 @@
+{
+  "sequences": {
+    "tpl-undangan-rapat:2026": 14,
+    "tpl-surat-tugas:2026": 8,
+    "tpl-surat-keputusan:2026": 5,
+    "tpl-penawaran-rab:2026": 19,
+    "tpl-surat-pengantar:2026": 27,
+    "tpl-keterangan-kerja:2026": 11
+  },
+  "kopProfiles": [
+    {
+      "id": "kop-nusantara",
+      "institutionType": "Korporasi Swasta",
+      "organizationName": "PT NUSANTARA TEKNOLOGI MANDIRI",
+      "subOrganization": "DIVISI OPERASIONAL & TATA KELOLA ADMINISTRASI",
+      "address": "Jl. Jend. Sudirman Kav. 52–53, SCBD, Jakarta Selatan 12190",
+      "contactLine": "Telp. (021) 5089-4410 · Surel: sekretariat@nusantaratech.co.id · www.nusantaratech.co.id",
+      "city": "Jakarta",
+      "crestCode": "NTM",
+      "accentColor": "#1E3A8A"
+    },
+    {
+      "id": "kop-diskominfo",
+      "institutionType": "Instansi Pemerintahan",
+      "organizationName": "PEMERINTAH KOTA BANDUNG",
+      "subOrganization": "DINAS KOMUNIKASI, INFORMATIKA, DAN STATISTIK",
+      "address": "Jl. Wastukencana No. 2, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung 40117",
+      "contactLine": "Telp. (022) 4234-891 · Faksimile (022) 4234-892 · Surel: diskominfo@bandung.go.id",
+      "city": "Bandung",
+      "crestCode": "BDG",
+      "accentColor": "#0F172A"
+    },
+    {
+      "id": "kop-cendekia",
+      "institutionType": "Lembaga Pendidikan",
+      "organizationName": "YAYASAN PENDIDIKAN CENDEKIA BANGSA",
+      "subOrganization": "SEKRETARIAT REKTORAT & AKADEMIK TERPADU",
+      "address": "Jl. Kaliurang KM 14,5, Besi, Sleman, Daerah Istimewa Yogyakarta 55584",
+      "contactLine": "Telp. (0274) 898-440 · Surel: rektorat@cendekiabangsa.ac.id · www.cendekiabangsa.ac.id",
+      "city": "Yogyakarta",
+      "crestCode": "YCB",
+      "accentColor": "#166534"
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl-undangan-rapat",
+      "code": "UND",
+      "name": "Surat Undangan Rapat Koordinasi & Susunan Acara",
+      "category": "Undangan",
+      "description": "Template surat undangan resmi lengkap dengan lampiran daftar peserta yang diundang serta susunan acara terstruktur.",
+      "numberPattern": "{seq}/{code}-{unit}/{roman_month}/{year}",
+      "defaultUnitCode": "SEK",
+      "sifat": "Penting",
+      "perihalTemplate": "Undangan {{nama_kegiatan}}",
+      "recipientBlockTemplate": "Yth. {{nama_tujuan}}\n{{jabatan_tujuan}}\n{{instansi_tujuan}}\ndi Tempat",
+      "salutation": "Dengan hormat,",
+      "bodyParagraphs": [
+        "Sehubungan dengan agenda pelaksanaan {{nama_kegiatan}} serta upaya penyelarasan program kerja tahun berjalan, kami mengharapkan kehadiran Bapak/Ibu/Saudara pada pertemuan yang akan diselenggarakan pada:",
+        "Hari, Tanggal : {{hari_tanggal}}\nWaktu          : {{waktu}}\nTempat         : {{tempat}}\nAgenda Utama   : {{agenda}}",
+        "Mengingat pentingnya pembahasan dalam rapat tersebut, dimohon kehadiran Bapak/Ibu/Saudara tepat pada waktunya. Rincian susunan acara dan daftar peserta terlampir bersama surat ini."
+      ],
+      "closingParagraph": "Demikian surat undangan ini kami sampaikan. Atas perhatian dan kehadiran Bapak/Ibu/Saudara, kami ucapkan terima kasih.",
+      "tembusanDefault": [
+        "Direktur Utama (sebagai laporan)",
+        "Arsip Sekretariat"
+      ],
+      "fields": [
+        {
+          "key": "nama_kegiatan",
+          "label": "Nama Kegiatan / Rapat",
+          "type": "text",
+          "placeholder": "Rapat Koordinasi Evaluasi Kinerja Kuartal IV",
+          "defaultValue": "Rapat Koordinasi Evaluasi Kinerja Kuartal IV",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "nama_tujuan",
+          "label": "Nama Pejabat / Penerima",
+          "type": "text",
+          "placeholder": "Bapak/Ibu Kepala Bagian & Manajer Unit",
+          "defaultValue": "Seluruh Kepala Divisi dan Manajer Unit",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "jabatan_tujuan",
+          "label": "Jabatan Tujuan",
+          "type": "text",
+          "placeholder": "Kepala Unit Operasional",
+          "defaultValue": "Unit Operasional, Keuangan, dan Teknologi Informasi",
+          "section": "tujuan"
+        },
+        {
+          "key": "instansi_tujuan",
+          "label": "Instansi / Alamat Tujuan",
+          "type": "text",
+          "placeholder": "PT Nusantara Teknologi Mandiri",
+          "defaultValue": "PT Nusantara Teknologi Mandiri",
+          "section": "tujuan"
+        },
+        {
+          "key": "hari_tanggal",
+          "label": "Hari & Tanggal Pelaksanaan",
+          "type": "text",
+          "placeholder": "Kamis, 26 November 2026",
+          "defaultValue": "Kamis, 26 November 2026",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "waktu",
+          "label": "Waktu Pelaksanaan",
+          "type": "text",
+          "placeholder": "09.00 – 12.00 WIB",
+          "defaultValue": "09.00 – 12.00 WIB",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "tempat",
+          "label": "Tempat / Ruang Rapat",
+          "type": "text",
+          "placeholder": "Ruang Auditorium Lantai 5 / Tautan Konferensi Video",
+          "defaultValue": "Ruang Rapat Utama Garuda, Lantai 5",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "agenda",
+          "label": "Ringkasan Agenda Rapat",
+          "type": "textarea",
+          "placeholder": "Pemaparan capaian kinerja, evaluasi anggaran, dan rencana kerja 2027",
+          "defaultValue": "Pemaparan capaian target Q4 2026, sinkronisasi anggaran, serta penetapan prioritas program kerja kuartal berikutnya.",
+          "section": "isi"
+        },
+        {
+          "key": "nama_penandatangan",
+          "label": "Nama Penandatangan",
+          "type": "text",
+          "placeholder": "Ir. Hendrawan Kusuma, M.M.",
+          "defaultValue": "Ir. Hendrawan Kusuma, M.M.",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "jabatan_penandatangan",
+          "label": "Jabatan Penandatangan",
+          "type": "text",
+          "placeholder": "Sekretaris Perusahaan",
+          "defaultValue": "Sekretaris Perusahaan",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "nip_nik",
+          "label": "NIP / NIK Penandatangan",
+          "type": "text",
+          "placeholder": "NIK. 20180412009",
+          "defaultValue": "NIK. 20180412009",
+          "section": "penandatangan"
+        }
+      ],
+      "defaultAttachments": [
+        {
+          "id": "att-und-1",
+          "title": "Daftar Pejabat dan Peserta yang Diundang",
+          "subtitle": "Agenda: {{nama_kegiatan}} ({{hari_tanggal}})",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "nama",
+              "label": "Nama Lengkap",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "jabatan",
+              "label": "Jabatan / Unit Kerja",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "peran",
+              "label": "Peran",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "keterangan",
+              "label": "Keterangan",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "nama": "Drs. Bagus Prasetyo",
+              "jabatan": "Direktur Operasional",
+              "peran": "Pimpinan Rapat",
+              "keterangan": "Hadir Luring"
+            },
+            {
+              "nama": "Ratna Dewi Anggraini, S.E.",
+              "jabatan": "Manajer Keuangan",
+              "peran": "Penyaji Materi Anggaran",
+              "keterangan": "Hadir Luring"
+            },
+            {
+              "nama": "Dimas Aditya Putra, S.Kom.",
+              "jabatan": "Kepala Divisi Teknologi",
+              "peran": "Penyaji Materi Sistem",
+              "keterangan": "Hadir Luring"
+            },
+            {
+              "nama": "Nadia Safitri, S.Psi.",
+              "jabatan": "Kepala Divisi SDM",
+              "peran": "Peserta Pembahas",
+              "keterangan": "Hadir Luring"
+            },
+            {
+              "nama": "Fajar Nugroho",
+              "jabatan": "Koordinator Sekretariat",
+              "peran": "Notulis",
+              "keterangan": "Hadir Luring"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Mohon konfirmasi kehadiran maksimal H-1 kepada Sekretariat melalui surel resmi."
+        },
+        {
+          "id": "att-und-2",
+          "title": "Susunan Acara {{nama_kegiatan}}",
+          "subtitle": "Lokasi: {{tempat}}",
+          "layoutType": "list",
+          "columns": [],
+          "rows": [],
+          "listItems": [
+            {
+              "title": "08.45 – 09.00 WIB · Registrasi Peserta",
+              "detail": "Pengisian daftar hadir dan distribusi berkas materi rapat."
+            },
+            {
+              "title": "09.00 – 09.15 WIB · Pembukaan & Arahan Pimpinan",
+              "detail": "Sambutan pembukaan oleh Direktur Operasional."
+            },
+            {
+              "title": "09.15 – 10.30 WIB · Pemaparan Evaluasi Kinerja & Anggaran",
+              "detail": "Presentasi capaian per unit kerja dan serapan anggaran Q4."
+            },
+            {
+              "title": "10.30 – 11.45 WIB · Diskusi & Perumusan Tindak Lanjut",
+              "detail": "Penyusunan matriks rencana aksi dan tenggat penyelesaian."
+            },
+            {
+              "title": "11.45 – 12.00 WIB · Penutup & Penandatanganan Berita Acara",
+              "detail": "Pembacaan kesimpulan rapat oleh notulis dan penutupan."
+            }
+          ],
+          "narrativeText": "",
+          "footerNote": "Jadwal dapat menyesuaikan dinamika pembahasan di ruang rapat."
+        }
+      ],
+      "updatedAt": "2026-11-20T09:00:00.000Z"
+    },
+    {
+      "id": "tpl-surat-tugas",
+      "code": "ST",
+      "name": "Surat Tugas Dinas & Daftar Personel",
+      "category": "Penugasan",
+      "description": "Surat perintah penugasan pegawai/tim ke lokasi tujuan disertai lampiran tabel daftar personel dan jadwal pelaksanaan.",
+      "numberPattern": "{seq}/{code}-{unit}/{roman_month}/{year}",
+      "defaultUnitCode": "SDM",
+      "sifat": "Segera",
+      "perihalTemplate": "Penugasan Pelaksanaan {{maksud_tugas}}",
+      "recipientBlockTemplate": "Yang bertanda tangan di bawah ini menugaskan kepada:\nNama / Tim tercantum pada Lampiran I\nUnit Kerja: {{unit_asal}}",
+      "salutation": "Dengan ini menugaskan kepada personel sebagaimana tercantum dalam lampiran surat ini untuk melaksanakan:",
+      "bodyParagraphs": [
+        "Dasar Penugasan : {{dasar_penugasan}}\nMaksud Tugas    : {{maksud_tugas}}\nLokasi Tugas    : {{lokasi_tugas}}\nTanggal Tugas   : {{tanggal_mulai}} s.d. {{tanggal_selesai}}\nBeban Anggaran  : {{beban_anggaran}}",
+        "Selama menjalankan tugas tersebut, seluruh personel yang ditugaskan wajib menjaga nama baik instansi, mematuhi prosedur operasional standar di lokasi tujuan, serta menyerahkan laporan hasil pelaksanaan tugas selambat-lambatnya 3 (tiga) hari kerja setelah penugasan selesai."
+      ],
+      "closingParagraph": "Demikian surat tugas ini diterbitkan untuk dilaksanakan dengan penuh tanggung jawab.",
+      "tembusanDefault": [
+        "Kepala Bagian Keuangan & Perjalanan Dinas",
+        "Arsip Kepegawaian"
+      ],
+      "fields": [
+        {
+          "key": "dasar_penugasan",
+          "label": "Dasar Penugasan / Rujukan",
+          "type": "text",
+          "placeholder": "Memo Internal Direktur No. 088/MEMO-DIR/XI/2026",
+          "defaultValue": "Disposisi Pimpinan dan Program Kerja Audit Sistem Wilayah Barat Tahun 2026",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "maksud_tugas",
+          "label": "Maksud & Tujuan Penugasan",
+          "type": "textarea",
+          "placeholder": "Implementasi dan Uji Coba Sistem Informasi Kearsipan Terpadu",
+          "defaultValue": "Audit Teknis Infrastruktur Jaringan dan Pelatihan Operator Sistem Wilayah Jawa Barat",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "unit_asal",
+          "label": "Unit Kerja Asal",
+          "type": "text",
+          "placeholder": "Divisi Implementasi & Infrastruktur",
+          "defaultValue": "Divisi Implementasi & Infrastruktur Teknologi",
+          "section": "tujuan"
+        },
+        {
+          "key": "lokasi_tugas",
+          "label": "Lokasi Penugasan",
+          "type": "text",
+          "placeholder": "Kantor Cabang Regional Bandung",
+          "defaultValue": "Kantor Cabang Regional Bandung, Jl. Asia Afrika No. 112",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "tanggal_mulai",
+          "label": "Tanggal Mulai Tugas",
+          "type": "date",
+          "placeholder": "2026-11-25",
+          "defaultValue": "2026-11-25",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "tanggal_selesai",
+          "label": "Tanggal Selesai Tugas",
+          "type": "date",
+          "placeholder": "2026-11-28",
+          "defaultValue": "2026-11-28",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "beban_anggaran",
+          "label": "Sumber / Beban Anggaran",
+          "type": "text",
+          "placeholder": "Anggaran Operasional Divisi TI Tahun 2026",
+          "defaultValue": "Pos Anggaran Perjalanan Dinas Operasional Kuartal IV 2026",
+          "section": "isi"
+        },
+        {
+          "key": "nama_penandatangan",
+          "label": "Nama Pejabat Pemberi Tugas",
+          "type": "text",
+          "placeholder": "dr. Kartika Sari Wibowo, M.B.A.",
+          "defaultValue": "dr. Kartika Sari Wibowo, M.B.A.",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "jabatan_penandatangan",
+          "label": "Jabatan Pemberi Tugas",
+          "type": "text",
+          "placeholder": "Direktur Sumber Daya Manusia",
+          "defaultValue": "Direktur Sumber Daya Manusia",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "nip_nik",
+          "label": "NIP / NIK",
+          "type": "text",
+          "placeholder": "NIK. 20150108002",
+          "defaultValue": "NIK. 20150108002",
+          "section": "penandatangan"
+        }
+      ],
+      "defaultAttachments": [
+        {
+          "id": "att-st-1",
+          "title": "Daftar Personel yang Ditugaskan",
+          "subtitle": "Lokasi: {{lokasi_tugas}} · Periode: {{tanggal_mulai}} s.d. {{tanggal_selesai}}",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "nama",
+              "label": "Nama Pegawai",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "nip",
+              "label": "NIP / NIK",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "jabatan",
+              "label": "Jabatan",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "peran",
+              "label": "Peran dalam Tim",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "nama": "Rizky Ramadhan, S.T.",
+              "nip": "20190311014",
+              "jabatan": "Senior Network Engineer",
+              "peran": "Ketua Tim Lapangan"
+            },
+            {
+              "nama": "Aulia Putri Maharani, S.Kom.",
+              "nip": "20210722031",
+              "jabatan": "System Analyst",
+              "peran": "Instruktur & Pendamping Teknis"
+            },
+            {
+              "nama": "Budi Santoso",
+              "nip": "20221104055",
+              "jabatan": "IT Support Specialist",
+              "peran": "Pelaksana Migrasi Data"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Seluruh personel wajib membawa tanda pengenal resmi dan salinan surat tugas ini."
+        }
+      ],
+      "updatedAt": "2026-11-18T14:30:00.000Z"
+    },
+    {
+      "id": "tpl-surat-keputusan",
+      "code": "SK",
+      "name": "Surat Keputusan Penetapan Tim & Susunan Panitia",
+      "category": "Keputusan",
+      "description": "Format Surat Keputusan resmi (Menimbang, Mengingat, Memutuskan) dengan lampiran struktur keanggotaan panitia/tim kerja.",
+      "numberPattern": "{seq}/{code}-{unit}/{roman_month}/{year}",
+      "defaultUnitCode": "DIR",
+      "sifat": "Resmi",
+      "perihalTemplate": "Keputusan tentang {{tentang}}",
+      "recipientBlockTemplate": "KEPUTUSAN PIMPINAN\nNOMOR TERTERA DI ATAS\nTENTANG\n{{tentang}}",
+      "salutation": "MEMUTUSKAN:",
+      "bodyParagraphs": [
+        "Menimbang : {{menimbang}}",
+        "Mengingat : {{mengingat}}",
+        "Menetapkan : PERTAMA, membentuk dan mengesahkan susunan tim pelaksana {{tentang}} sebagaimana tercantum dalam Lampiran Keputusan ini.\nKEDUA, tim pelaksana bertugas menyusun perencanaan, mengoordinasikan pelaksanaan teknis, serta melaporkan pertanggungjawaban kepada Pimpinan.\nKETIGA, segala biaya yang timbul akibat diterbitkannya keputusan ini dibebankan pada anggaran yang relevan.\nKEEMPAT, keputusan ini berlaku sejak tanggal ditetapkan dan apabila terdapat kekeliruan di kemudian hari akan dilakukan perbaikan sebagaimana mestinya."
+      ],
+      "closingParagraph": "Ditetapkan di {{tempat_penetapan}} pada tanggal {{tanggal_penetapan}}.",
+      "tembusanDefault": [
+        "Dewan Komisaris / Pengawas",
+        "Masing-masing anggota tim yang bersangkutan",
+        "Arsip Hukum & Tata Kelola"
+      ],
+      "fields": [
+        {
+          "key": "tentang",
+          "label": "Judul / Tentang Keputusan",
+          "type": "text",
+          "placeholder": "Pembentukan Tim Transformasi Digital dan Otomatisasi Layanan 2026",
+          "defaultValue": "Pembentukan Tim Transformasi Digital dan Otomatisasi Tata Naskah Tahun 2026",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "menimbang",
+          "label": "Konsiderans Menimbang",
+          "type": "textarea",
+          "placeholder": "Bahwa untuk kelancaran pelaksanaan program kerja...",
+          "defaultValue": "Bahwa dalam rangka meningkatkan efisiensi administrasi persuratan dan akuntabilitas tata kelola dokumen, dipandang perlu menetapkan Tim Pelaksana Transformasi Digital.",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "mengingat",
+          "label": "Dasar Hukum (Mengingat)",
+          "type": "textarea",
+          "placeholder": "1. Anggaran Dasar Perusahaan; 2. Rencana Kerja Tahunan...",
+          "defaultValue": "1. Anggaran Dasar dan Anggaran Rumah Tangga Organisasi; 2. Pedoman Tata Naskah Dinas Tahun 2026; 3. Hasil Rapat Pimpinan tanggal 10 November 2026.",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "tempat_penetapan",
+          "label": "Tempat Penetapan",
+          "type": "text",
+          "placeholder": "Jakarta",
+          "defaultValue": "Jakarta",
+          "section": "penandatangan"
+        },
+        {
+          "key": "tanggal_penetapan",
+          "label": "Tanggal Penetapan",
+          "type": "text",
+          "placeholder": "23 November 2026",
+          "defaultValue": "23 November 2026",
+          "section": "penandatangan"
+        },
+        {
+          "key": "nama_penandatangan",
+          "label": "Nama Pejabat Penetap",
+          "type": "text",
+          "placeholder": "Dr. Haryo Setiawan, M.Sc.",
+          "defaultValue": "Dr. Haryo Setiawan, M.Sc.",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "jabatan_penandatangan",
+          "label": "Jabatan Penetap",
+          "type": "text",
+          "placeholder": "Direktur Utama",
+          "defaultValue": "Direktur Utama",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "nip_nik",
+          "label": "NIP / NIK",
+          "type": "text",
+          "placeholder": "NIK. 20100101001",
+          "defaultValue": "NIK. 20100101001",
+          "section": "penandatangan"
+        }
+      ],
+      "defaultAttachments": [
+        {
+          "id": "att-sk-1",
+          "title": "Susunan Keanggotaan Tim Pelaksana",
+          "subtitle": "Berdasarkan Keputusan tentang {{tentang}}",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "nama",
+              "label": "Nama Lengkap",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "unit",
+              "label": "Unit Kerja",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "kedudukan",
+              "label": "Kedudukan dalam Tim",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "tugas",
+              "label": "Uraian Tugas Pokok",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "nama": "Ir. Hendrawan Kusuma, M.M.",
+              "unit": "Sekretariat Perusahaan",
+              "kedudukan": "Pengarah",
+              "tugas": "Memberikan arahan kebijakan dan supervisi umum"
+            },
+            {
+              "nama": "Dimas Aditya Putra, S.Kom.",
+              "unit": "Divisi Teknologi",
+              "kedudukan": "Ketua Tim",
+              "tugas": "Memimpin eksekusi teknis dan integrasi database"
+            },
+            {
+              "nama": "Siti Nurhaliza, S.H.",
+              "unit": "Divisi Hukum & Kepatuhan",
+              "kedudukan": "Sekretaris Tim",
+              "tugas": "Menyusun standar regulasi tata naskah dan arsip"
+            },
+            {
+              "nama": "Pratama Wijaya, S.Ak.",
+              "unit": "Divisi Keuangan",
+              "kedudukan": "Anggota",
+              "tugas": "Verifikasi kebutuhan anggaran dan pengadaan"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Lampiran ini merupakan bagian yang tidak terpisahkan dari Surat Keputusan."
+        }
+      ],
+      "updatedAt": "2026-11-15T11:20:00.000Z"
+    },
+    {
+      "id": "tpl-penawaran-rab",
+      "code": "SPK",
+      "name": "Surat Penawaran Kerja Sama & Lampiran RAB",
+      "category": "Niaga",
+      "description": "Surat penawaran resmi kepada mitra/klien dengan lampiran tabel Rincian Anggaran Biaya (RAB) yang menghitung total otomatis.",
+      "numberPattern": "{seq}/{code}-{unit}/{roman_month}/{year}",
+      "defaultUnitCode": "COM",
+      "sifat": "Penawaran Resmi",
+      "perihalTemplate": "Penawaran Harga {{judul_proyek}}",
+      "recipientBlockTemplate": "Yth. {{nama_klien}}\n{{jabatan_klien}}\n{{perusahaan_klien}}\n{{alamat_klien}}",
+      "salutation": "Dengan hormat,",
+      "bodyParagraphs": [
+        "Menindaklanjuti diskusi kebutuhan solusi serta komitmen kami untuk mendukung kelancaran operasional di {{perusahaan_klien}}, bersama ini kami mengajukan penawaran kerja sama untuk pekerjaan {{judul_proyek}}.",
+        "Lingkup pekerjaan yang kami tawarkan mencakup {{ringkasan_penawaran}}. Seluruh tahapan pelaksanaan akan didampingi oleh tenaga ahli berpengalaman dengan jaminan layanan purnajual selama masa kontrak.",
+        "Rincian spesifikasi pekerjaan, volume, serta estimasi biaya investasi tercantum lengkap pada Lampiran I surat penawaran ini. Penawaran harga ini berlaku selama {{masa_berlaku}} sejak tanggal surat diterbitkan."
+      ],
+      "closingParagraph": "Demikian surat penawaran ini kami sampaikan. Besar harapan kami untuk dapat menjalin kerja sama yang saling menguntungkan. Atas perhatian Bapak/Ibu, kami ucapkan terima kasih.",
+      "tembusanDefault": [
+        "Divisi Keuangan & Penagihan",
+        "Arsip Komersial"
+      ],
+      "fields": [
+        {
+          "key": "judul_proyek",
+          "label": "Judul Proyek / Pekerjaan",
+          "type": "text",
+          "placeholder": "Pengembangan Sistem Informasi Manajemen Arsip Terpadu",
+          "defaultValue": "Pengembangan Sistem Otomatisasi Surat & Arsip Digital",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "nama_klien",
+          "label": "Nama Pejabat Klien",
+          "type": "text",
+          "placeholder": "Bapak Arif Budiman",
+          "defaultValue": "Bapak Arif Budiman, S.E., M.M.",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "jabatan_klien",
+          "label": "Jabatan Klien",
+          "type": "text",
+          "placeholder": "Kepala Bagian Pengadaan",
+          "defaultValue": "Direktur Operasional & Pengadaan",
+          "section": "tujuan"
+        },
+        {
+          "key": "perusahaan_klien",
+          "label": "Nama Perusahaan / Instansi Klien",
+          "type": "text",
+          "placeholder": "PT Mitra Sejahtera Abadi",
+          "defaultValue": "PT Mitra Sejahtera Abadi",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "alamat_klien",
+          "label": "Alamat Klien",
+          "type": "text",
+          "placeholder": "Jl. HR Rasuna Said Kav. B-10, Jakarta",
+          "defaultValue": "Jl. HR Rasuna Said Kav. B-10, Jakarta Selatan",
+          "section": "tujuan"
+        },
+        {
+          "key": "ringkasan_penawaran",
+          "label": "Ringkasan Lingkup Pekerjaan",
+          "type": "textarea",
+          "placeholder": "Analisis kebutuhan, konfigurasi database template, pelatihan...",
+          "defaultValue": "analisis kebutuhan tata naskah, penyusunan database template surat dinas, implementasi modul generator lampiran otomatis, serta pelatihan administrator selama 2 hari",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "masa_berlaku",
+          "label": "Masa Berlaku Penawaran",
+          "type": "text",
+          "placeholder": "30 (tiga puluh) hari kalender",
+          "defaultValue": "30 (tiga puluh) hari kalender",
+          "section": "isi"
+        },
+        {
+          "key": "nama_penandatangan",
+          "label": "Nama Penandatangan",
+          "type": "text",
+          "placeholder": "Dian Permatasari, S.T., M.M.",
+          "defaultValue": "Dian Permatasari, S.T., M.M.",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "jabatan_penandatangan",
+          "label": "Jabatan Penandatangan",
+          "type": "text",
+          "placeholder": "Kepala Divisi Pengembangan Bisnis",
+          "defaultValue": "Kepala Divisi Pengembangan Bisnis",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "nip_nik",
+          "label": "NIP / NIK",
+          "type": "text",
+          "placeholder": "NIK. 20170819005",
+          "defaultValue": "NIK. 20170819005",
+          "section": "penandatangan"
+        }
+      ],
+      "defaultAttachments": [
+        {
+          "id": "att-spk-1",
+          "title": "Rincian Anggaran Biaya (RAB) {{judul_proyek}}",
+          "subtitle": "Ditujukan kepada: {{perusahaan_klien}} · Berlaku {{masa_berlaku}}",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "uraian",
+              "label": "Uraian Pekerjaan / Komponen",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "volume",
+              "label": "Vol",
+              "type": "number",
+              "align": "center"
+            },
+            {
+              "key": "satuan",
+              "label": "Satuan",
+              "type": "text",
+              "align": "center"
+            },
+            {
+              "key": "harga_satuan",
+              "label": "Harga Satuan",
+              "type": "currency",
+              "align": "right"
+            },
+            {
+              "key": "jumlah",
+              "label": "Jumlah Biaya",
+              "type": "currency",
+              "align": "right"
+            }
+          ],
+          "rows": [
+            {
+              "uraian": "Analisis Tata Naskah & Desain Skema Database Template",
+              "volume": "1",
+              "satuan": "Paket",
+              "harga_satuan": "8500000",
+              "jumlah": "8500000"
+            },
+            {
+              "uraian": "Implementasi Mesin Generator Surat & Penomoran Otomatis",
+              "volume": "1",
+              "satuan": "Modul",
+              "harga_satuan": "15000000",
+              "jumlah": "15000000"
+            },
+            {
+              "uraian": "Migrasi & Konversi Template Eksisting (s.d. 25 Template)",
+              "volume": "25",
+              "satuan": "Template",
+              "harga_satuan": "350000",
+              "jumlah": "8750000"
+            },
+            {
+              "uraian": "Pelatihan Operator & Dokumentasi Panduan Pengguna",
+              "volume": "2",
+              "satuan": "Sesi",
+              "harga_satuan": "2500000",
+              "jumlah": "5000000"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "showSummaryRow": true,
+          "summaryColumnKey": "jumlah",
+          "footerNote": "Harga belum termasuk PPN 11%. Termin pembayaran: 40% Uang Muka, 40% UAT, 20% Serah Terima Akhir."
+        }
+      ],
+      "updatedAt": "2026-11-19T16:10:00.000Z"
+    },
+    {
+      "id": "tpl-surat-pengantar",
+      "code": "SPG",
+      "name": "Surat Pengantar Dokumen & Daftar Berkas",
+      "category": "Administrasi",
+      "description": "Surat pengantar pengiriman berkas fisik maupun digital lengkap dengan daftar periksa jumlah eksemplar dan keterangan.",
+      "numberPattern": "{seq}/{code}-{unit}/{roman_month}/{year}",
+      "defaultUnitCode": "UMU",
+      "sifat": "Biasa",
+      "perihalTemplate": "Pengantar Pengiriman {{judul_berkas}}",
+      "recipientBlockTemplate": "Yth. {{nama_penerima}}\n{{instansi_penerima}}\n{{alamat_penerima}}",
+      "salutation": "Dengan hormat,",
+      "bodyParagraphs": [
+        "Bersama surat ini kami sampaikan berkas {{judul_berkas}} guna keperluan tindak lanjut administrasi dan verifikasi pada unit yang Bapak/Ibu pimpin.",
+        "Catatan Pengiriman: {{catatan_pengantar}}",
+        "Rincian daftar dokumen yang dikirimkan tercantum pada tabel Lampiran I di halaman berikutnya. Mohon kesediaannya untuk melakukan konfirmasi penerimaan berkas setelah dokumen diterima dengan lengkap."
+      ],
+      "closingParagraph": "Demikian surat pengantar ini kami sampaikan. Atas perhatian dan kerja sama Bapak/Ibu, kami ucapkan terima kasih.",
+      "tembusanDefault": [
+        "Arsip Tata Usaha"
+      ],
+      "fields": [
+        {
+          "key": "judul_berkas",
+          "label": "Judul Paket Berkas",
+          "type": "text",
+          "placeholder": "Dokumen Kontrak & Berita Acara Serah Terima Pekerjaan",
+          "defaultValue": "Dokumen Laporan Pertanggungjawaban dan Berita Acara Serah Terima",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "nama_penerima",
+          "label": "Nama / Jabatan Penerima",
+          "type": "text",
+          "placeholder": "Kepala Subbagian Tata Usaha",
+          "defaultValue": "Kepala Bagian Administrasi & Kearsipan",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "instansi_penerima",
+          "label": "Instansi Penerima",
+          "type": "text",
+          "placeholder": "Badan Perencanaan Pembangunan Daerah",
+          "defaultValue": "PT Sentosa Karya Infrastruktur",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "alamat_penerima",
+          "label": "Alamat Penerima",
+          "type": "text",
+          "placeholder": "Jl. Merdeka Barat No. 14, Jakarta Pusat",
+          "defaultValue": "Jl. Merdeka Barat No. 14, Jakarta Pusat 10110",
+          "section": "tujuan"
+        },
+        {
+          "key": "catatan_pengantar",
+          "label": "Catatan Pengiriman",
+          "type": "textarea",
+          "placeholder": "Dikirim dalam map bersegel melalui kurir internal...",
+          "defaultValue": "Seluruh dokumen telah ditandatangani dan dibubuhi stempel basah asli sebanyak 2 (dua) rangkap.",
+          "section": "isi"
+        },
+        {
+          "key": "nama_penandatangan",
+          "label": "Nama Pengirim / Penandatangan",
+          "type": "text",
+          "placeholder": "Eko Prasetyo Wibowo",
+          "defaultValue": "Eko Prasetyo Wibowo, S.A.P.",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "jabatan_penandatangan",
+          "label": "Jabatan Pengirim",
+          "type": "text",
+          "placeholder": "Kepala Bagian Umum",
+          "defaultValue": "Kepala Bagian Umum & Tata Usaha",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "nip_nik",
+          "label": "NIP / NIK",
+          "type": "text",
+          "placeholder": "NIK. 20160215011",
+          "defaultValue": "NIK. 20160215011",
+          "section": "penandatangan"
+        }
+      ],
+      "defaultAttachments": [
+        {
+          "id": "att-spg-1",
+          "title": "Daftar Berkas yang Dikirimkan",
+          "subtitle": "Paket: {{judul_berkas}}",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "nama_dokumen",
+              "label": "Nama Dokumen / Berkas",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "nomor_dokumen",
+              "label": "Nomor Dokumen",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "jumlah",
+              "label": "Jumlah",
+              "type": "text",
+              "align": "center"
+            },
+            {
+              "key": "keterangan",
+              "label": "Keterangan",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "nama_dokumen": "Berita Acara Serah Terima Pekerjaan (BAST)",
+              "nomor_dokumen": "042/BAST/XI/2026",
+              "jumlah": "2 Rangkap",
+              "keterangan": "Asli Bermeterai"
+            },
+            {
+              "nama_dokumen": "Laporan Akhir Pelaksanaan Kegiatan",
+              "nomor_dokumen": "LAP-2026-Q4",
+              "jumlah": "1 Jilid",
+              "keterangan": "Jilid Hardcover + PDF"
+            },
+            {
+              "nama_dokumen": "Salinan Faktur & Bukti Pendukung",
+              "nomor_dokumen": "INV/2026/11/089",
+              "jumlah": "1 Berkas",
+              "keterangan": "Salinan Terlegalisir"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Harap memeriksa kelengkapan berkas sebelum menandatangani tanda terima kurir."
+        }
+      ],
+      "updatedAt": "2026-11-12T08:45:00.000Z"
+    },
+    {
+      "id": "tpl-keterangan-kerja",
+      "code": "SKK",
+      "name": "Surat Keterangan Pengalaman Kerja & Riwayat Jabatan",
+      "category": "Kepegawaian",
+      "description": "Surat keterangan kerja (paklaring) resmi dari bagian HRD lengkap dengan lampiran riwayat penugasan dan jabatan karyawan.",
+      "numberPattern": "{seq}/{code}-{unit}/{roman_month}/{year}",
+      "defaultUnitCode": "HRD",
+      "sifat": "Resmi",
+      "perihalTemplate": "Surat Keterangan Kerja a.n. {{nama_karyawan}}",
+      "recipientBlockTemplate": "SURAT KETERANGAN PENGALAMAN KERJA\nNomor Tertera di Atas",
+      "salutation": "Yang bertanda tangan di bawah ini menerangkan bahwa:",
+      "bodyParagraphs": [
+        "Nama Lengkap        : {{nama_karyawan}}\nNIK / ID Karyawan   : {{nik_karyawan}}\nTempat, Tgl. Lahir  : {{ttl_karyawan}}\nJabatan Terakhir    : {{jabatan_terakhir}}\nDivisi / Unit Kerja : {{divisi}}",
+        "Adalah benar pernah bekerja sebagai karyawan tetap pada instansi kami terhitung sejak tanggal {{tanggal_masuk}} sampai dengan tanggal {{tanggal_keluar}} dengan alasan berakhirnya hubungan kerja: {{alasan_berhenti}}.",
+        "Selama masa pengabdiannya, yang bersangkutan telah menunjukkan dedikasi, integritas, serta kinerja profesional yang baik. Rincian riwayat penugasan tercantum pada Lampiran surat keterangan ini."
+      ],
+      "closingParagraph": "Demikian surat keterangan ini dibuat dengan sebenarnya untuk dapat dipergunakan sebagaimana mestinya.",
+      "tembusanDefault": [
+        "Arsip File Karyawan (HRIS)"
+      ],
+      "fields": [
+        {
+          "key": "nama_karyawan",
+          "label": "Nama Karyawan",
+          "type": "text",
+          "placeholder": "Andi Wijaya Kusuma, S.Kom.",
+          "defaultValue": "Andi Wijaya Kusuma, S.Kom.",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "nik_karyawan",
+          "label": "NIK / ID Karyawan",
+          "type": "text",
+          "placeholder": "EMP-2021-0148",
+          "defaultValue": "EMP-2021-0148",
+          "required": true,
+          "section": "tujuan"
+        },
+        {
+          "key": "ttl_karyawan",
+          "label": "Tempat, Tanggal Lahir",
+          "type": "text",
+          "placeholder": "Semarang, 14 Mei 1995",
+          "defaultValue": "Semarang, 14 Mei 1995",
+          "section": "tujuan"
+        },
+        {
+          "key": "jabatan_terakhir",
+          "label": "Jabatan Terakhir",
+          "type": "text",
+          "placeholder": "Senior Software Engineer",
+          "defaultValue": "Senior Software Engineer",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "divisi",
+          "label": "Divisi / Departemen",
+          "type": "text",
+          "placeholder": "Teknologi Informasi & Pengembangan Produk",
+          "defaultValue": "Teknologi Informasi & Pengembangan Produk",
+          "section": "isi"
+        },
+        {
+          "key": "tanggal_masuk",
+          "label": "Tanggal Mulai Bekerja",
+          "type": "text",
+          "placeholder": "1 Maret 2021",
+          "defaultValue": "1 Maret 2021",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "tanggal_keluar",
+          "label": "Tanggal Berakhir Bekerja",
+          "type": "text",
+          "placeholder": "31 Oktober 2026",
+          "defaultValue": "31 Oktober 2026",
+          "required": true,
+          "section": "isi"
+        },
+        {
+          "key": "alasan_berhenti",
+          "label": "Alasan Berakhirnya Hubungan Kerja",
+          "type": "select",
+          "placeholder": "Mengundurkan diri secara baik-baik",
+          "defaultValue": "Mengundurkan diri secara baik-baik",
+          "options": [
+            "Mengundurkan diri secara baik-baik",
+            "Berakhirnya masa perjanjian kerja waktu tertentu (PKWT)",
+            "Memasuki masa purna tugas / pensiun"
+          ],
+          "section": "isi"
+        },
+        {
+          "key": "nama_penandatangan",
+          "label": "Nama Pejabat HRD",
+          "type": "text",
+          "placeholder": "dr. Kartika Sari Wibowo, M.B.A.",
+          "defaultValue": "dr. Kartika Sari Wibowo, M.B.A.",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "jabatan_penandatangan",
+          "label": "Jabatan Pejabat HRD",
+          "type": "text",
+          "placeholder": "Direktur Sumber Daya Manusia",
+          "defaultValue": "Direktur Sumber Daya Manusia",
+          "required": true,
+          "section": "penandatangan"
+        },
+        {
+          "key": "nip_nik",
+          "label": "NIP / NIK Penandatangan",
+          "type": "text",
+          "placeholder": "NIK. 20150108002",
+          "defaultValue": "NIK. 20150108002",
+          "section": "penandatangan"
+        }
+      ],
+      "defaultAttachments": [
+        {
+          "id": "att-skk-1",
+          "title": "Riwayat Penugasan & Jabatan {{nama_karyawan}}",
+          "subtitle": "ID Karyawan: {{nik_karyawan}} · Divisi: {{divisi}}",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "periode",
+              "label": "Periode",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "jabatan",
+              "label": "Jabatan / Posisi",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "unit",
+              "label": "Unit / Proyek",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "status",
+              "label": "Status Kinerja",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "periode": "Mar 2021 – Des 2022",
+              "jabatan": "Software Engineer",
+              "unit": "Tim Portal Layanan Publik",
+              "status": "Sangat Baik"
+            },
+            {
+              "periode": "Jan 2023 – Jun 2024",
+              "jabatan": "Lead Frontend Developer",
+              "unit": "Tim Sistem Administrasi Digital",
+              "status": "Sangat Baik"
+            },
+            {
+              "periode": "Jul 2024 – Okt 2026",
+              "jabatan": "Senior Software Engineer",
+              "unit": "Divisi Pengembangan Produk",
+              "status": "Istimewa"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Dokumen riwayat ini diterbitkan berdasarkan catatan resmi Human Resources Information System."
+        }
+      ],
+      "updatedAt": "2026-11-10T10:00:00.000Z"
+    }
+  ],
+  "letters": [
+    {
+      "id": "let-sample-1",
+      "templateId": "tpl-undangan-rapat",
+      "templateName": "Surat Undangan Rapat Koordinasi & Susunan Acara",
+      "templateCode": "UND",
+      "kopProfileId": "kop-nusantara",
+      "letterNumber": "014/UND-SEK/XI/2026",
+      "letterDate": "2026-11-20",
+      "sifat": "Penting",
+      "perihal": "Undangan Rapat Koordinasi Evaluasi Kinerja Kuartal IV",
+      "recipientSummary": "Seluruh Kepala Divisi dan Manajer Unit",
+      "unitCode": "SEK",
+      "fieldValues": {
+        "nama_kegiatan": "Rapat Koordinasi Evaluasi Kinerja Kuartal IV",
+        "nama_tujuan": "Seluruh Kepala Divisi dan Manajer Unit",
+        "jabatan_tujuan": "Unit Operasional, Keuangan, dan Teknologi Informasi",
+        "instansi_tujuan": "PT Nusantara Teknologi Mandiri",
+        "hari_tanggal": "Kamis, 26 November 2026",
+        "waktu": "09.00 – 12.00 WIB",
+        "tempat": "Ruang Rapat Utama Garuda, Lantai 5",
+        "agenda": "Pemaparan capaian target Q4 2026, sinkronisasi anggaran, serta penetapan prioritas program kerja kuartal berikutnya.",
+        "nama_penandatangan": "Ir. Hendrawan Kusuma, M.M.",
+        "jabatan_penandatangan": "Sekretaris Perusahaan",
+        "nip_nik": "NIK. 20180412009"
+      },
+      "attachments": [
+        {
+          "id": "att-und-1",
+          "title": "Daftar Pejabat dan Peserta yang Diundang",
+          "subtitle": "Agenda: Rapat Koordinasi Evaluasi Kinerja Kuartal IV (Kamis, 26 November 2026)",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "nama",
+              "label": "Nama Lengkap",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "jabatan",
+              "label": "Jabatan / Unit Kerja",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "peran",
+              "label": "Peran",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "keterangan",
+              "label": "Keterangan",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "nama": "Drs. Bagus Prasetyo",
+              "jabatan": "Direktur Operasional",
+              "peran": "Pimpinan Rapat",
+              "keterangan": "Hadir Luring"
+            },
+            {
+              "nama": "Ratna Dewi Anggraini, S.E.",
+              "jabatan": "Manajer Keuangan",
+              "peran": "Penyaji Materi Anggaran",
+              "keterangan": "Hadir Luring"
+            },
+            {
+              "nama": "Dimas Aditya Putra, S.Kom.",
+              "jabatan": "Kepala Divisi Teknologi",
+              "peran": "Penyaji Materi Sistem",
+              "keterangan": "Hadir Luring"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Mohon konfirmasi kehadiran maksimal H-1 kepada Sekretariat melalui surel resmi."
+        }
+      ],
+      "tembusan": [
+        "Direktur Utama (sebagai laporan)",
+        "Arsip Sekretariat"
+      ],
+      "createdAt": "2026-11-20T10:15:00.000Z"
+    },
+    {
+      "id": "let-sample-2",
+      "templateId": "tpl-penawaran-rab",
+      "templateName": "Surat Penawaran Kerja Sama & Lampiran RAB",
+      "templateCode": "SPK",
+      "kopProfileId": "kop-nusantara",
+      "letterNumber": "019/SPK-COM/XI/2026",
+      "letterDate": "2026-11-19",
+      "sifat": "Penawaran Resmi",
+      "perihal": "Penawaran Harga Pengembangan Sistem Otomatisasi Surat & Arsip Digital",
+      "recipientSummary": "PT Mitra Sejahtera Abadi",
+      "unitCode": "COM",
+      "fieldValues": {
+        "judul_proyek": "Pengembangan Sistem Otomatisasi Surat & Arsip Digital",
+        "nama_klien": "Bapak Arif Budiman, S.E., M.M.",
+        "jabatan_klien": "Direktur Operasional & Pengadaan",
+        "perusahaan_klien": "PT Mitra Sejahtera Abadi",
+        "alamat_klien": "Jl. HR Rasuna Said Kav. B-10, Jakarta Selatan",
+        "ringkasan_penawaran": "analisis kebutuhan tata naskah, penyusunan database template surat dinas, implementasi modul generator lampiran otomatis, serta pelatihan administrator selama 2 hari",
+        "masa_berlaku": "30 (tiga puluh) hari kalender",
+        "nama_penandatangan": "Dian Permatasari, S.T., M.M.",
+        "jabatan_penandatangan": "Kepala Divisi Pengembangan Bisnis",
+        "nip_nik": "NIK. 20170819005"
+      },
+      "attachments": [
+        {
+          "id": "att-spk-1",
+          "title": "Rincian Anggaran Biaya (RAB) Pengembangan Sistem Otomatisasi Surat & Arsip Digital",
+          "subtitle": "Ditujukan kepada: PT Mitra Sejahtera Abadi · Berlaku 30 (tiga puluh) hari kalender",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "uraian",
+              "label": "Uraian Pekerjaan / Komponen",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "volume",
+              "label": "Vol",
+              "type": "number",
+              "align": "center"
+            },
+            {
+              "key": "satuan",
+              "label": "Satuan",
+              "type": "text",
+              "align": "center"
+            },
+            {
+              "key": "harga_satuan",
+              "label": "Harga Satuan",
+              "type": "currency",
+              "align": "right"
+            },
+            {
+              "key": "jumlah",
+              "label": "Jumlah Biaya",
+              "type": "currency",
+              "align": "right"
+            }
+          ],
+          "rows": [
+            {
+              "uraian": "Analisis Tata Naskah & Desain Skema Database Template",
+              "volume": "1",
+              "satuan": "Paket",
+              "harga_satuan": "8500000",
+              "jumlah": "8500000"
+            },
+            {
+              "uraian": "Implementasi Mesin Generator Surat & Penomoran Otomatis",
+              "volume": "1",
+              "satuan": "Modul",
+              "harga_satuan": "15000000",
+              "jumlah": "15000000"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "showSummaryRow": true,
+          "summaryColumnKey": "jumlah",
+          "footerNote": "Harga belum termasuk PPN 11%."
+        }
+      ],
+      "tembusan": [
+        "Divisi Keuangan & Penagihan",
+        "Arsip Komersial"
+      ],
+      "createdAt": "2026-11-19T14:20:00.000Z"
+    },
+    {
+      "id": "let-sample-3",
+      "templateId": "tpl-surat-tugas",
+      "templateName": "Surat Tugas Dinas & Daftar Personel",
+      "templateCode": "ST",
+      "kopProfileId": "kop-diskominfo",
+      "letterNumber": "008/ST-SDM/XI/2026",
+      "letterDate": "2026-11-18",
+      "sifat": "Segera",
+      "perihal": "Penugasan Pelaksanaan Audit Teknis Infrastruktur Jaringan Wilayah Bandung",
+      "recipientSummary": "Divisi Implementasi & Infrastruktur Teknologi (3 Personel)",
+      "unitCode": "SDM",
+      "fieldValues": {
+        "dasar_penugasan": "Disposisi Pimpinan dan Program Kerja Audit Sistem Wilayah Barat Tahun 2026",
+        "maksud_tugas": "Audit Teknis Infrastruktur Jaringan Wilayah Bandung",
+        "unit_asal": "Divisi Implementasi & Infrastruktur Teknologi",
+        "lokasi_tugas": "Kantor Cabang Regional Bandung, Jl. Asia Afrika No. 112",
+        "tanggal_mulai": "2026-11-25",
+        "tanggal_selesai": "2026-11-28",
+        "beban_anggaran": "Pos Anggaran Perjalanan Dinas Operasional Kuartal IV 2026",
+        "nama_penandatangan": "dr. Kartika Sari Wibowo, M.B.A.",
+        "jabatan_penandatangan": "Direktur Sumber Daya Manusia",
+        "nip_nik": "NIK. 20150108002"
+      },
+      "attachments": [
+        {
+          "id": "att-st-1",
+          "title": "Daftar Personel yang Ditugaskan",
+          "subtitle": "Lokasi: Kantor Cabang Regional Bandung · Periode: 25–28 November 2026",
+          "layoutType": "table",
+          "columns": [
+            {
+              "key": "nama",
+              "label": "Nama Pegawai",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "nip",
+              "label": "NIP / NIK",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "jabatan",
+              "label": "Jabatan",
+              "type": "text",
+              "align": "left"
+            },
+            {
+              "key": "peran",
+              "label": "Peran dalam Tim",
+              "type": "text",
+              "align": "left"
+            }
+          ],
+          "rows": [
+            {
+              "nama": "Rizky Ramadhan, S.T.",
+              "nip": "20190311014",
+              "jabatan": "Senior Network Engineer",
+              "peran": "Ketua Tim Lapangan"
+            },
+            {
+              "nama": "Aulia Putri Maharani, S.Kom.",
+              "nip": "20210722031",
+              "jabatan": "System Analyst",
+              "peran": "Pendamping Teknis"
+            }
+          ],
+          "listItems": [],
+          "narrativeText": "",
+          "footerNote": "Seluruh personel wajib membawa tanda pengenal resmi."
+        }
+      ],
+      "tembusan": [
+        "Kepala Bagian Keuangan & Perjalanan Dinas",
+        "Arsip Kepegawaian"
+      ],
+      "createdAt": "2026-11-18T09:05:00.000Z"
+    }
+  ]
+}
